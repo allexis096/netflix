@@ -20,6 +20,8 @@
 		ADC35B55289580F90007F7D2 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B54289580F90007F7D2 /* HeroHeaderUIView.swift */; };
 		ADC35B572896D5E70007F7D2 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B562896D5E70007F7D2 /* APICaller.swift */; };
 		ADC35B592896DC6A0007F7D2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B582896DC6A0007F7D2 /* Movie.swift */; };
+		ADC35B5B2896FD210007F7D2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B5A2896FD210007F7D2 /* Extensions.swift */; };
+		ADC35B5D289753EE0007F7D2 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B5C289753EE0007F7D2 /* Tv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		ADC35B54289580F90007F7D2 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		ADC35B562896D5E70007F7D2 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		ADC35B582896DC6A0007F7D2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		ADC35B5A2896FD210007F7D2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ADC35B5C289753EE0007F7D2 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC35B582896DC6A0007F7D2 /* Movie.swift */,
+				ADC35B5C289753EE0007F7D2 /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		ADC35B50289209E20007F7D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADC35B5A2896FD210007F7D2 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,9 +219,11 @@
 				ADC35B55289580F90007F7D2 /* HeroHeaderUIView.swift in Sources */,
 				ADC35B4C289200BB0007F7D2 /* DownloadsViewController.swift in Sources */,
 				ADC35B312891FDF40007F7D2 /* AppDelegate.swift in Sources */,
+				ADC35B5B2896FD210007F7D2 /* Extensions.swift in Sources */,
 				ADC35B332891FDF40007F7D2 /* SceneDelegate.swift in Sources */,
 				ADC35B482892008A0007F7D2 /* UpcomingViewController.swift in Sources */,
 				ADC35B592896DC6A0007F7D2 /* Movie.swift in Sources */,
+				ADC35B5D289753EE0007F7D2 /* Tv.swift in Sources */,
 				ADC35B462892004F0007F7D2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
