@@ -1,5 +1,5 @@
 //
-//  UpcomingViewController.swift
+//  SearchViewController.swift
 //  netflix
 //
 //  Created by allexis figueiredo on 27/07/22.
@@ -7,53 +7,64 @@
 
 import UIKit
 
-class UpcomingViewController: UIViewController {
+class SearchViewController: UIViewController {
+    
     private var titles: [Title] = [Title]()
     
-    private let upcomingTable: UITableView = {
+    private let discoverTable: UITableView = {
         let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         
         return table
     }()
+    
+    private let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = "Search for a movie or a Tv show"
+        controller.searchBar.searchBarStyle = .minimal
+        
+        return controller
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .systemBackground
-        
-        title = "Upcoming"
+        title = "Search"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
-        view.addSubview(upcomingTable)
-        upcomingTable.delegate = self
-        upcomingTable.dataSource = self
+        view.addSubview(discoverTable)
+        discoverTable.delegate = self
+        discoverTable.dataSource = self
         
-        fectchUpcoming()
+        navigationItem.searchController = searchController
+        
+        fetchDiscoverMovies()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        upcomingTable.frame = view.bounds
-    }
-    
-    private func fectchUpcoming() {
-        APICaller.shared.getUpcomingMovies { [weak self] result in
+    private func fetchDiscoverMovies() {
+        APICaller.shared.getDiscoverMovies { [weak self] result in
             switch result {
             case .success(let titles):
                 self?.titles = titles
                 DispatchQueue.main.async {
-                    self?.upcomingTable.reloadData()
+                    self?.discoverTable.reloadData()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        discoverTable.frame = view.bounds
+    }
 }
 
-extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
     }
@@ -64,13 +75,13 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         let title = titles[indexPath.row]
-        
-        cell.configure(with: TitleViewModel(titleName: title.original_title ?? title.original_name ?? "Unknown", posterUrl: title.poster_path ?? ""))
+        let model = TitleViewModel(titleName: title.original_title ?? title.original_name ?? "Unknown name", posterUrl: title.poster_path ?? "")
+        cell.configure(with: model)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  140
+        return 140
     }
 }
