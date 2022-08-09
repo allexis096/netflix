@@ -11,6 +11,8 @@
 		AD0CAA0D289B324B0025E90A /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CAA0C289B324B0025E90A /* TitleViewModel.swift */; };
 		AD0CAA0F289B6C540025E90A /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CAA0E289B6C540025E90A /* SearchResultsViewController.swift */; };
 		AD0CAA13289EF5B10025E90A /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CAA12289EF5B10025E90A /* YoutubeSearchResponse.swift */; };
+		AD0CAA1628A1F27F0025E90A /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CAA1528A1F27F0025E90A /* TitlePreviewViewController.swift */; };
+		AD0CAA1828A1F5840025E90A /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CAA1728A1F5840025E90A /* TitlePreviewViewModel.swift */; };
 		ADC35B312891FDF40007F7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B302891FDF40007F7D2 /* AppDelegate.swift */; };
 		ADC35B332891FDF40007F7D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B322891FDF40007F7D2 /* SceneDelegate.swift */; };
 		ADC35B352891FDF40007F7D2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC35B342891FDF40007F7D2 /* MainTabBarViewController.swift */; };
@@ -35,6 +37,8 @@
 		AD0CAA0C289B324B0025E90A /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		AD0CAA0E289B6C540025E90A /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		AD0CAA12289EF5B10025E90A /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		AD0CAA1528A1F27F0025E90A /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		AD0CAA1728A1F5840025E90A /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 		ADC35B2D2891FDF40007F7D2 /* netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC35B302891FDF40007F7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADC35B322891FDF40007F7D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				ADC35B472892008A0007F7D2 /* UpcomingViewController.swift */,
 				ADC35B49289200A00007F7D2 /* SearchViewController.swift */,
 				ADC35B4B289200BB0007F7D2 /* DownloadsViewController.swift */,
+				AD0CAA1528A1F27F0025E90A /* TitlePreviewViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0CAA0C289B324B0025E90A /* TitleViewModel.swift */,
+				AD0CAA1728A1F5840025E90A /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 				ADC35B5B2896FD210007F7D2 /* Extensions.swift in Sources */,
 				AD0CAA13289EF5B10025E90A /* YoutubeSearchResponse.swift in Sources */,
 				ADC35B332891FDF40007F7D2 /* SceneDelegate.swift in Sources */,
+				AD0CAA1828A1F5840025E90A /* TitlePreviewViewModel.swift in Sources */,
 				ADC35B482892008A0007F7D2 /* UpcomingViewController.swift in Sources */,
+				AD0CAA1628A1F27F0025E90A /* TitlePreviewViewController.swift in Sources */,
 				ADC35B592896DC6A0007F7D2 /* Title.swift in Sources */,
 				ADC35B462892004F0007F7D2 /* HomeViewController.swift in Sources */,
 				AD0CAA0D289B324B0025E90A /* TitleViewModel.swift in Sources */,
