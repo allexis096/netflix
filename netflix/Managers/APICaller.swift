@@ -8,9 +8,9 @@
 import Foundation
 
 struct Constants {
-    static let API_KEY = "9e779c8e3bd85e74370186a6d22978ce"
+    static let API_KEY = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
     static let baseURL = "https://api.themoviedb.org"
-    static let YoutubeAPI_KEY = "AIzaSyD3xFZwy8zWIwlMUidRJ6MK0bRn8dCDtdc"
+    static let YoutubeAPI_KEY = ProcessInfo.processInfo.environment["YoutubeAPI_KEY"] ?? ""
     static let YoutubeBaseURL = "https://youtube.googleapis.com/youtube/v3/search?"
 }
 
