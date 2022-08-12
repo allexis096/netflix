@@ -57,6 +57,7 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(downloadButton)
         
         configureConstraints()
+        navigationController?.navigationItem.leftItemsSupplementBackButton = true
     }
     
     func configureConstraints() {
